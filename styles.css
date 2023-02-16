@@ -1,0 +1,519 @@
+*{
+  
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+li{
+  text-decoration: none;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+ 
+  
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+.texto{
+  
+    overflow-x: scroll;
+    overflow-y: auto;
+    width: auto;
+    height: 600px;
+    padding: 3%;
+
+  
+}
+
+
+
+
+
+.modalDialog {  
+  position: fixed;    
+  font-family: Arial, Helvetica, sans-serif;  
+  top: 0;     
+  right: 0;   
+  bottom: 0;  
+  left: 0;    
+  background: rgba(0,0,0,0.8);    
+  z-index: 99999;     
+  opacity:0;  
+  -webkit-transition: opacity 400ms ease-in;  
+  -moz-transition: opacity 400ms ease-in;     
+  transition: opacity 400ms ease-in;  
+  pointer-events: none; 
+}   
+.modalDialog:target {   
+  opacity:1;  
+  pointer-events: auto; 
+}   
+.modalDialog > div {    
+  width: 450px;   
+  position: relative;     
+  margin: 10% auto;   
+  padding: 5px 20px 13px 20px;    
+  border-radius: 10px;    
+  background: #fff;   
+  background: -moz-linear-gradient(#243B55, #141E30);   
+  background: -webkit-linear-gradient(#243B55, #141E30);    
+  background: -o-linear-gradient(#243B55, #141E30); 
+  -webkit-transition: opacity 400ms ease-in; 
+  -moz-transition: opacity 400ms ease-in; 
+  transition: opacity 400ms ease-in; 
+} 
+.close {    
+  background: #141E30;    
+  color: #FFFFFF;     
+  line-height: 25px;  
+  position: absolute;     
+  right: -12px;   
+  text-align: center;     
+  top: -10px;     
+  width: 24px;    
+  text-decoration: none;  
+  font-weight: bold;  
+  -webkit-border-radius: 12px;    
+  -moz-border-radius: 12px;   
+  border-radius: 12px;    
+  -moz-box-shadow: 1px 1px 3px #000;  
+  -webkit-box-shadow: 1px 1px 3px #000;   
+  box-shadow: 1px 1px 3px #000; 
+}   
+  .close:hover { 
+      background: #141E30; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    position:fixed;
+    justify-content: flex-end;
+}
+
+body{
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0px;
+    padding: 10px;
+}
+
+input, textarea{
+    color: black; 
+}
+
+.form{
+    display: grid;
+    border: 1px solid rgb(200, 200, 200) ;
+    width: 300px;
+    justify-content: center; 
+    padding: 30px;
+}
+
+#foto{
+    width: 280px;
+    border: solid 5px;
+    border-radius: 5px;
+    border-color: #ffffff;
+    box-shadow: 10px 5px 50px rgba(145, 145, 145, 0.291);
+}
+
+.div-container div img{
+    width: 280px !important;
+    display: flex !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    
+}
+
+input{
+    color: black;
+}
+
+.div-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    padding: 10px;
+
+}
+
+.div-container div{
+
+   
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+.div-container div a{
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.enviar{
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.slider{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.slider ul{
+    display: flex;
+    margin: 0%;
+    padding: 0px;
+    width: 100%;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: 10px 0px 0 0px;
+}
+
+.slider img{
+    width: 95%;
+    height: 95%;
+    margin: 0%;
+    padding: 0px;
+}
+
+
+.iconos{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+#icon1 img{
+    width: 40px;
+}
+
+#icon2 img{
+    width: 40px;
+}
+
+#icon3 img{
+    width: 40px;
+}
+
+nav{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    position:fixed;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+a:hover{
+  
+    background-color: rgba(0, 0, 0, 0.166);
+    
+    overflow: hidden;
+    
+}
+
+.hamburger-btn {
+    
+    margin-right: 25px;
+  }
+
+.nav-list {
+    display: none;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: #bbb solid;
+    margin-top: 0 !important;
+    width: 100%;
+  }
+  
+  .hamburger-btn:hover {
+    box-shadow: 0 0 0 2px gray;
+    cursor: pointer;
+  }
+  
+  #check {
+    display: none
+  }
+  
+  #check:checked~.nav-list {
+    display: flex;
+  }
+  
+  .nav-list>li {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .presen {box-sizing:border-box !important;
+};
+
+  /* Slideshow container */
+  .slideshow-container {
+   display: flex;
+    position: relative;
+    margin: 0 auto;
+    
+    justify-content: center;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+   
+    max-width: 50%;
+    
+    
+    margin: 0 auto;
+    display: flex;
+    
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+
+  .mySlides img{
+   
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 34px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  
+  
+ 
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  .slider img{
+    max-width: 90%;
+    height: 90%;
+    justify-content: center;
+    margin: 0% auto;
+    padding: 0px;
+
+}
+
+.texto{
+  text-align: justify;
+}
+
+
+@media (max-width: 700px){
+    a{
+        grid-column: 1; 
+    }
+    .slider ul{
+        display: grid;
+        grid-column: 1;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    
+    }
+
+    .modalDialog > div {    
+      width: 300px;  
+     }
+
+    .slider img{
+        max-width: 95%;
+        height: 95%;
+        
+        margin: 0%;
+        padding: 0px;
+    
+    }
+   
+  p{
+    width: 95%;
+  }
+
+
+
+  .mySlides {
+   
+    max-width: 80%;
+    
+    
+    margin: 0 auto;
+    display: flex;
+    
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+
+
+
+/*nav*/
+
+    nav{
+    
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(255, 255, 255, 0);
+        position:fixed;
+        justify-content: center;
+        
+    }
+
+    nav{
+        display: flex;
+        background-color: rgba(255, 255, 255, 0);
+        position:fixed;
+        justify-content: flex-end;
+        
+    }
+    
+    nav a {
+        
+        color: white;
+        padding: 5px;
+        text-decoration: none;
+        text-align: center;
+        
+    }
+    a:hover{
+        background-color: rgba(0, 0, 0, 0.166);
+        
+    }
+    
+    .hamburger-btn {
+        
+        margin-right: 25px;
+        
+      }
+    
+    
+    .nav-list {
+        
+        background-color: #141E30;
+        margin-top: 0 !important;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      
+      .hamburger-btn:hover {
+        box-shadow: 0 0 0 2px gray;
+        cursor: pointer;
+        
+      }
+      
+      #check {
+        display: none
+      }
+      
+      #check:checked~.nav-list {
+        display: grid;
+      }
+      
+}
+
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}}
