@@ -166,6 +166,7 @@ input{
     justify-content: center;
     grid-template-columns: auto auto;
     padding: 10px;
+    
 
 }
 
@@ -175,21 +176,25 @@ input{
     margin: 10px;
     padding: 10px;
     
+    
 }
 
 .div-container div a{
     margin: auto;
+    
 }
 
 .container{
     display: flex;
     justify-content: center;
+    
 }
 
 
 
 .enviar{
     background: rgb(255, 255, 255);
+    
     
     
 }
@@ -248,13 +253,14 @@ input{
 
 nav{
     display: flex;
-    background-color: rgba(255, 255, 255, 0);
+    background-color : rgba(255, 255, 255, 0);
     position:fixed;
     justify-content: flex-end;
+    
 }
 
 nav a {
-    color: white;
+    
     padding: 5px;
     text-decoration: none;
     text-align: center;
@@ -276,7 +282,10 @@ a:hover{
 
 .nav-list {
     display: none;
-    background: rgb(208, 208, 208);
+    color: #000!;
+    background-color: #f7f7f7;
+opacity: 1;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7 20px ), repeating-linear-gradient( #ffffff55, #ffffff );
    
     border: #e6e6e6 solid;
     margin-top: 0 !important;
