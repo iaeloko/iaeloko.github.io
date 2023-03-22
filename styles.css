@@ -122,9 +122,8 @@ nav{
 body{
     
     background: rgb(223, 223, 223);
-    background-color: #f7f7f7;
-opacity: 1;
-background: linear-gradient(135deg, #ffffff55 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(225deg, #ffffff 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(315deg, #ffffff55 25%, transparent 25%) 0px 0/ 40px 40px, linear-gradient(45deg, #ffffff 25%, #f7f7f7 25%) 0px 0/ 40px 40px;
+    background-color: #ffffff;
+
     margin: 0px;
     padding: 10px;
 }
