@@ -62,8 +62,7 @@ ul{
   padding: 5px 20px 13px 20px;    
   border-radius: 10px;    
   background-color: #f7f7f7;
-  opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7 20px ), repeating-linear-gradient( #ffffff55, #ffffff );
+  
      
   
   
@@ -284,8 +283,7 @@ a:hover{
     display: none;
     color: #000!;
     background-color: #f7f7f7;
-opacity: 1;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7 20px ), repeating-linear-gradient( #ffffff55, #ffffff );
+
    
     border: #e6e6e6 solid;
     margin-top: 0 !important;
@@ -504,8 +502,7 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f
     .nav-list {
         
       background-color: #f7f7f7;
-opacity: 1;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f7f7f7 20px ), repeating-linear-gradient( #ffffff55, #ffffff );
+
         margin-top: 0 !important;
         width: 100%;
         flex-wrap: wrap;
