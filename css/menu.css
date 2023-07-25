@@ -1,0 +1,131 @@
+
+html {
+  
+    height: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    color: #ffffff;
+   
+   
+  }
+  
+  
+  .html-image{
+    height: 250px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  .botonera{
+    display: grid;
+    text-align: center;
+    justify-content: center ;
+    grid-template-columns: 1fr ;
+    width: 100%;
+   
+    
+  }
+  
+  button {
+    
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    margin-bottom: 15px;
+    width: 300px;
+    text-align: center;
+    
+  }
+  
+  
+  button:hover {
+    background-color: #000000;
+    color: #fff;
+  }
+  
+   h2 {
+    font-weight: 900;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  
+  .material-symbols-outlined {
+  
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: #ffffff;
+  }
+  
+  .material-symbols-outlined:hover {
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+       display: grid;
+       grid-template-columns: 2fr;
+        align-items: center;
+    }
+  
+    
+  }
+  
+
+  
+  .container img {
+    max-width: 200px;
+    max-height: auto;
+    justify-self: center;
+  
+  }
+  
+  .container .content {
+    margin-top: 20px;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .yael{
+   
+    width: 400px;
+  }
+
+  img {
+    animation: girar 20s infinite linear; /* El número "5s" es la duración de la animación */
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  @keyframes girar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

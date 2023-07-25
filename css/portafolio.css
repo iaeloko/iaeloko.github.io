@@ -1,0 +1,116 @@
+html {
+  
+    height: 100%;
+    
+    font-family: 'Roboto', sans-serif;
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: #ffffff;
+    
+    
+   
+  }
+  
+ h1{
+  text-align: center;
+ }
+  
+ h2{
+  text-align: center;
+ }
+  p{
+    
+    margin-bottom: 20px;
+  }
+  
+  
+  .material-symbols-outlined:hover {
+    cursor: pointer;
+  }
+  
+  .material-symbols-outlined {
+    color: #ffffff;
+  
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+
+  img{
+    max-width: 300px;
+  }
+
+  button {
+    
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    margin-bottom: 30px;
+    width: 300px;
+    text-align: center;
+    
+  }
+  
+  
+  button:hover {
+    background-color: #000000;
+    color: #fff;
+  }
+
+.contenedor-web{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+ 
+}
+
+.web {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 0 auto; /* Centrar horizontalmente */
+  margin-bottom: 30px;
+ 
+}
+
+.web:hover {
+  border-color: #ffffff; /* Cambia el color del borde en el hover */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.9); /* Agrega una sombra al elemento en el hover */
+  background-color: #ffffff25;
+}
+
+.web img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.web p {
+  margin-top: 10px;
+}
+
+.web button {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .contenedor-web{
+    display: grid;
+    grid-template-columns: 1fr; /* Crea dos columnas de igual tamaño */
+   
+  }
+
+
+
+}
