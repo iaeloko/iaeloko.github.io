@@ -68,16 +68,20 @@ html {
 .contenedor-web{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 20px;
   
  
 }
 
 .web {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   border: 1px solid #ccc;
   padding: 25px;
   border-radius: 10px;
-  max-width: 300px;
+ 
   margin: 0 auto; /* Centrar horizontalmente */
   margin-bottom: 30px;
  
@@ -97,10 +101,13 @@ html {
 
 .web p {
   margin-top: 10px;
+  display: flex;
+  justify-self: center;
 }
 
 .web button {
   margin-top: 10px;
+  
 }
 
 @media (max-width: 768px) {
