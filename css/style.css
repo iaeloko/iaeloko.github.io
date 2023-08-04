@@ -21,6 +21,7 @@ header{
   padding: 20px;
  background-color: #ffffff20;
   margin: 0;
+  
 
 }
 
@@ -37,6 +38,7 @@ h1{
  
   font-weight: bold;
   text-align: center;
+  padding: 20px;
   
 }
 h2{
@@ -60,12 +62,10 @@ h2{
 
 .hola_mundo p{
   text-align: justify;
+  padding: 30px;
 }
 
-h2{
-  margin-bottom: 30px;
-  
-}
+
 
 .Portafolio{
 
@@ -73,7 +73,7 @@ h2{
 
   justify-content: center;
   padding-bottom: 40px;
-  padding-top: 30px;
+
 
 }
 .imagen_yael img{
@@ -88,9 +88,8 @@ h2{
 
 .contenedor-web{
   display: grid;
-  grid-template-columns:  repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
-  
+  grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+  gap:30px;
   justify-content: center;
 }
 
@@ -112,7 +111,7 @@ button {
 }
 
 .web img{
-  width: 250px;
+  width: 270px;
   border-radius: 5%;
   box-shadow: 2px 2px 9px#000000;
 }
@@ -123,6 +122,9 @@ button:hover {
   background-color: #000000;
   color: #fff;
 }
+
+
+
 
 footer h1{
   color: rgb(236, 234, 247);
@@ -140,7 +142,28 @@ footer{
 
 }
   
+.yt{
+  display: grid;
+  grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+  gap:30px;
+  justify-content: center;
+  margin-bottom: 40px;
 
+}
+
+iframe{
+  width: 450px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 9px#000000;
+}
+footer img{
+
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+}
 
 
 @media screen and (max-width: 835px) {
@@ -155,12 +178,27 @@ footer{
   .imagen_yael img{
   
     border-radius: 100%;
-    width: 300px;
+    width: 280px;
     box-shadow: 2px 2px 9px#000000;
     
    
   }
+  .yt{
+    display: grid;
+    grid-template-columns: 1f;
+    justify-content: center;
+    width: auto;
+    height: auto;
+  }
 
+  iframe{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 9px#000000;
+  }
+
+  
 
 
 }
