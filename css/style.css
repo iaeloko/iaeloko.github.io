@@ -53,7 +53,7 @@ h2{
 
 .web p{
   color: rgb(243, 243, 243);
-  font-size: small;
+  
 
 }
 
@@ -145,8 +145,7 @@ button {
   width: 270px;
   border-radius: 5%;
   box-shadow: 2px 2px 9px#000000;
-  transform: scale(1);
-  animation: zoomInAnimation 10s forwards;
+  
 }
 
 
@@ -156,7 +155,10 @@ button:hover {
   color: #fff;
 }
 
-
+.web{
+  transform: scale(1);
+  animation: zoomInAnimation 10s forwards;
+}
 
 
 footer h1{
@@ -184,7 +186,8 @@ footer{
   gap:30px;
   justify-content: center;
   margin-bottom: 40px;
-
+  transform: scale(1);
+  animation: zoomInAnimation 8s forwards;
 }
 
 iframe{
