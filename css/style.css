@@ -7,7 +7,10 @@ html {
   text-align: center;
   font-family: 'Roboto', sans-serif;
  
-  background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+  background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   
   color: #ffffff;
  justify-content: center;
@@ -32,7 +35,7 @@ header{
 
 header h1{
   
-  color: rgb(236, 234, 247);
+  color: #efb810;
   text-shadow: 2px 5px 4px#ffffff33;
   font-weight: bold;
   justify-content: center;
@@ -47,9 +50,9 @@ h1{
   padding: 0px;
   
 }
-h2{
-  color: rgb(255, 255, 255);
-  padding: 36px;
+h1{
+  color: #efb810;
+  padding: 0px;
 }
 
 .web p{
@@ -73,6 +76,7 @@ h2{
 .hola_mundo p{
   text-align: justify;
   padding: 30px;
+  font-size: medium;
  
 }
 
@@ -128,9 +132,9 @@ h2{
 button {
     
   padding: 10px 20px;
-  background-color: #fff;
-  color: #333;
-  border: 2px solid #333;
+  background-color: #efb810;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 40px;
   font-size: 16px;
   font-weight: 600;
@@ -196,6 +200,10 @@ footer{
   padding: 15px;
 }
 
+.yt h3{
+  color: #efb810
+}
+
 iframe{
   width: 450px;
   height: 300px;
@@ -219,6 +227,7 @@ footer h1{
 .contenedor-medio{
  margin-top: 70px;
 height:auto;
+
  
 }
 
