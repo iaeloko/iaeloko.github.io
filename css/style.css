@@ -27,6 +27,7 @@ header{
   margin: 0;
   
   
+  
  
 
 }
@@ -37,6 +38,7 @@ header h1{
   text-shadow: 2px 5px 4px#ffffff33;
   font-weight: bold;
   justify-content: center;
+  
   
   
 }
@@ -111,7 +113,7 @@ h1{
 .imagen_yael img{
   
   border-radius: 100%;
-  width: 550px;
+  width: 450px;
   box-shadow: 2px 2px 9px#000000;
   transform: translateX(-100%);
   animation: slideInLeftAnimation 2s forwards;
