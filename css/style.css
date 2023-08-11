@@ -320,5 +320,15 @@ height:auto;
     
   }
 
+  html {
+
+    background-image: linear-gradient(to right, #0b0b0b 0%, black 100%) !important;
+
+  }
+
+  video {
+  display: none;
+  }
+  
 
 }
