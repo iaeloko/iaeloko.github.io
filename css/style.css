@@ -61,6 +61,7 @@ header h1{
   font-weight: bold;
   justify-content: center;
   font-size: 80px;
+  font-family: 'Caveat', cursive;
   
   
   
@@ -75,6 +76,8 @@ h1{
   color: #efb810;
   text-shadow: 2px 2px 4px#6e6002c2;
   font-size: 50px;
+  font-family: 'Caveat', cursive;
+  
 }
 
 .web p{
@@ -82,21 +85,26 @@ h1{
 
 }
 
+.conoce{
+  margin-top: 0;
+}
+
 .hola_mundo{
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 10px;
-  margin-bottom: 20px;
+
   justify-content: center;
   width: auto;
   height: 750px;
   align-items: center;
+  margin-bottom: 0;
 
 }
 
 .hola_mundo p{
   text-align: justify;
-  padding: 20px;
+  padding: 10px;
   
  
 }
@@ -113,13 +121,22 @@ h1{
   
 }
 
+.text h1{
+  margin-bottom: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Caveat', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Urbanist', sans-serif;
+}
 
 .text img{
   width: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   transform: rotate(0deg);
   animation: rotateAnimation 8s infinite linear;
 }
+
+
 
 .Portafolio{
 
@@ -223,7 +240,7 @@ footer{
 .yt h3{
   color: #efb810;
   font-size: 35px;
-  
+  font-family: 'Caveat', cursive;
 
 }
 
@@ -244,6 +261,9 @@ footer img{
 
 footer h1{
   color: #fff;
+  font-family: 'Caveat', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Urbanist', sans-serif;
   
 }
 
