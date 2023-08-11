@@ -274,6 +274,22 @@ height:auto;
  
 }
 
+.animacion {
+  position: absolute;
+  animation: moverImagen 10s linear infinite; /* 10 segundos de duración, linear timing, infinito */
+}
+
+@keyframes moverImagen {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: calc(100% - 100px); /* Ajusta esto según el tamaño de tu imagen */
+    left: calc(100% - 100px); /* Ajusta esto según el tamaño de tu imagen */
+  }
+}
+
 @keyframes slideInLeftAnimation {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
