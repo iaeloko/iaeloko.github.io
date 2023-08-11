@@ -13,6 +13,7 @@ html {
   
   color: #ffffff;
  justify-content: center;
+ font-size: 25px;
  
 }
 
@@ -71,16 +72,13 @@ h1{
   text-align: center;
   padding: 0px;
   text-shadow: 2px 2px 4px#6e6002c2;
-}
-h1{
   color: #efb810;
-  padding: 0px;
   text-shadow: 2px 2px 4px#6e6002c2;
+  font-size: 50px;
 }
 
 .web p{
   color: #ffffff;
-  
 
 }
 
@@ -98,8 +96,8 @@ h1{
 
 .hola_mundo p{
   text-align: justify;
-  padding: 30px;
-  font-size: medium;
+  padding: 20px;
+  
  
 }
 
@@ -223,7 +221,10 @@ footer{
 }
 
 .yt h3{
-  color: #efb810
+  color: #efb810;
+  font-size: 35px;
+  
+
 }
 
 iframe{
