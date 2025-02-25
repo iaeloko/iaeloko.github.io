@@ -131,7 +131,7 @@ h3 {
 }
 
 .grid-item {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -160,6 +160,7 @@ h3 {
     flex-wrap: wrap;
     gap: 2rem;
 }
+
 
 .tech-item {
     text-align: center;
