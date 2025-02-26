@@ -465,7 +465,8 @@ footer p{
         min-width: 100%;
     }
     .email-container {
-     max-width: 80%;
+    
+     max-width: 110%;
     }
 
 }
