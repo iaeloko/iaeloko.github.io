@@ -259,7 +259,7 @@ footer {
 }
 
 .download-button i {
-    margin-right: 0.5rem;
+    margin-right: .5rem;
 }
 
 #contacto {
@@ -331,13 +331,15 @@ footer {
 
 .copy-button{
     background-color: white;
-    padding: 0.75rem 1.5rem;
+    padding: .8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     
 }
+
+
 
 #videos {
     text-align: center;
@@ -358,6 +360,10 @@ footer {
 .video-wrapper iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
+}
+
+footer p{
+    color: aliceblue !important;
 }
 
 @media (max-width: 1200px) {
@@ -458,4 +464,8 @@ footer {
     .profile-info {
         min-width: 100%;
     }
+    .email-container {
+     max-width: 80%;
+    }
+
 }
