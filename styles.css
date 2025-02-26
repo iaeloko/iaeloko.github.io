@@ -286,12 +286,12 @@ footer {
     align-items: center;
     gap: 1rem;
     background-color: #f0f0f0;
-    padding: 1rem;
+    padding: .4rem;
     border-radius: 8px;
 }
 
 .email-container i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
 }
 
