@@ -1,91 +1,59 @@
-/* =========================
-   script.js
-   ========================= */
+const navToggle = document.querySelector('.nav__toggle');
+const navMenu = document.querySelector('.nav__menu');
 
-/* ====== CAMBIAR EL VIDEO DE YOUTUBE AQUÍ ======
-   Si prefieres cambiarlo desde JS, usa:
-   const VIDEO_ID = "XXXXXXXXXXX";
-   Y asigna al iframe.
-   Por defecto se toma del HTML: <div class="video" data-video-id="...">
-*/
-(function () {
-  "use strict";
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
 
-  // Footer year
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-
-  // Mobile nav toggle
-  const toggle = document.querySelector(".nav__toggle");
-  const menu = document.getElementById("navMenu");
-  if (toggle && menu) {
-    toggle.addEventListener("click", () => {
-      const isOpen = menu.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
+  });
+}
 
-    // Close menu when clicking a link
-    menu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
+const smartGrids = document.querySelectorAll('.smart-grid');
 
-  // YouTube embed (from data-video-id)
-  const videoWrap = document.querySelector(".video");
-  const iframe = videoWrap ? videoWrap.querySelector("iframe") : null;
+const updateSmartGrid = (grid) => {
+  const items = Array.from(grid.children).filter((node) => node.nodeType === 1);
+  const count = items.length;
+  if (!count) return;
 
-  if (videoWrap && iframe) {
-    const id = videoWrap.getAttribute("data-video-id") || "";
-    // Use a privacy-enhanced domain
-    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0&modestbranding=1&playsinline=1`;
-  }
+  const minCardWidth = Number(grid.dataset.minCard || grid.dataset.minCardWidth || 220);
+  const gap = parseFloat(getComputedStyle(grid).gap) || 20;
+  const gridWidth = grid.clientWidth;
+  const maxCols = Math.max(1, Math.floor((gridWidth + gap) / (minCardWidth + gap)));
 
-  // Copy video link button
-  const copyBtn = document.getElementById("copyVideoLink");
-  if (copyBtn && videoWrap) {
-    copyBtn.addEventListener("click", async () => {
-      const id = videoWrap.getAttribute("data-video-id") || "";
-      const url = `https://www.youtube.com/watch?v=${id}`;
+  let cols = Math.min(maxCols, count);
 
-      try {
-        await navigator.clipboard.writeText(url);
-        copyBtn.textContent = "Copiado ✅";
-        setTimeout(() => (copyBtn.textContent = "Copiar link"), 1200);
-      } catch {
-        copyBtn.textContent = "No se pudo 😅";
-        setTimeout(() => (copyBtn.textContent = "Copiar link"), 1200);
+  if (count === 5 && maxCols >= 5) {
+    cols = 5;
+  } else if (count % 3 === 0 && maxCols >= 3) {
+    cols = 3;
+  } else {
+    for (let c = Math.min(maxCols, count); c >= 1; c -= 1) {
+      const remainder = count % c;
+      if (remainder === 0 || remainder >= 2 || c === count) {
+        cols = c;
+        break;
       }
-    });
+    }
   }
 
-  // Simple contact form validation (client-side)
-  const form = document.getElementById("contactForm");
-  const hint = document.getElementById("formHint");
+  grid.style.setProperty('--cols', cols);
+};
 
-  if (form && hint) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+const updateAllSmartGrids = () => {
+  smartGrids.forEach(updateSmartGrid);
+};
 
-      const name = form.querySelector("#name");
-      const email = form.querySelector("#email");
-      const message = form.querySelector("#message");
+let resizeTimer;
+window.addEventListener('resize', () => {
+  window.clearTimeout(resizeTimer);
+  resizeTimer = window.setTimeout(updateAllSmartGrids, 120);
+});
 
-      const missing = [];
-      if (!name.value.trim()) missing.push("Nombre");
-      if (!email.value.trim()) missing.push("Email");
-      if (!message.value.trim()) missing.push("Mensaje");
-
-      if (missing.length) {
-        hint.textContent = `Faltan campos: ${missing.join(", ")}.`;
-        return;
-      }
-
-      // NOTE: Aquí puedes integrar un endpoint (Formspree, Netlify Forms, tu API, etc.)
-      hint.textContent = "Listo ✅ Tu mensaje está preparado. (Integra un endpoint para enviarlo.)";
-      form.reset();
-    });
-  }
-})();
+requestAnimationFrame(updateAllSmartGrids);
