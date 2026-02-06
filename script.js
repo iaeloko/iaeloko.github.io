@@ -79,6 +79,8 @@ const initYouTubePlayer = () => {
   };
 
   new window.YT.Player(playerEl, {
+    width: '100%',
+    height: '100%',
     videoId,
     playerVars: {
       autoplay: 1,
