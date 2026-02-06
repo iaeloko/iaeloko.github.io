@@ -57,3 +57,49 @@ window.addEventListener('resize', () => {
 });
 
 requestAnimationFrame(updateAllSmartGrids);
+
+const videoRoot = document.querySelector('.video');
+
+const initYouTubePlayer = () => {
+  if (!videoRoot || !window.YT || !window.YT.Player) return;
+
+  const videoId = videoRoot.dataset.videoId;
+  const playerEl = videoRoot.querySelector('.video__player');
+
+  if (!videoId || !playerEl) return;
+
+  const onStateChange = (event) => {
+    if (event.data === window.YT.PlayerState.ENDED) {
+      videoRoot.classList.add('is-ended');
+    }
+
+    if (event.data === window.YT.PlayerState.PLAYING) {
+      videoRoot.classList.remove('is-ended');
+    }
+  };
+
+  new window.YT.Player(playerEl, {
+    videoId,
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+      playsinline: 1,
+      rel: 0,
+      modestbranding: 1,
+    },
+    events: {
+      onStateChange,
+    },
+  });
+};
+
+if (videoRoot) {
+  if (window.YT && window.YT.Player) {
+    initYouTubePlayer();
+  } else {
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(script);
+    window.onYouTubeIframeAPIReady = initYouTubePlayer;
+  }
+}
