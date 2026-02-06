@@ -1,205 +1,419 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- =========================
+     index.html
+     ========================= -->
+<!doctype html>
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./media/codigo.png" type="image/x-icon">
-    <title>Yael Villarreal - Desarrollador Web Freelance</title>
-    <meta name="description" content="Yael Villarreal, desarrollador web freelance especializado en crear sitios web modernos, rápidos y optimizados para SEO.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- =========================
+       SEO: Title + Description
+       ========================= -->
+  <title>Iaeloko Studio | Ecosistema Creativo & Marcas Digitales</title>
+  <meta name="description" content="Iaeloko Studio es la página madre de un ecosistema de marcas digitales: contenido, tecnología, diseño y comercio. Conoce nuestras marcas activas y proyectos vinculados." />
+  <meta name="keywords" content="Iaeloko Studio, branding, diseño web, landing page, marcas digitales, contenido, innovación, tecnología, México" />
+  <meta name="author" content="Iaeloko Studio" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#6D28D9" />
+
+  <!-- Canonical (cámbialo al dominio real cuando lo publiques) -->
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Iaeloko Studio | Ecosistema Creativo & Marcas Digitales" />
+  <meta property="og:description" content="La página madre de un ecosistema de marcas digitales: contenido, tecnología, diseño y comercio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Iaeloko Studio | Ecosistema Creativo & Marcas Digitales" />
+  <meta name="twitter:description" content="La página madre de un ecosistema de marcas digitales: contenido, tecnología, diseño y comercio." />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
+
+  <!-- Preconnect (fonts optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Optional: Font (puedes cambiarla o quitarla) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- =========================
+       Structured Data (Organization)
+       ========================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Iaeloko Studio",
+    "url": "https://example.com/",
+    "logo": "https://example.com/assets/logo-iaeloko-studio.png",
+    "sameAs": [
+      "https://www.youtube.com/@tu-canal",
+      "https://www.instagram.com/tu-cuenta",
+      "https://www.tiktok.com/@tu-cuenta"
+    ],
+    "description": "Iaeloko Studio es la página madre de un ecosistema de marcas digitales: contenido, tecnología, diseño y comercio.",
+    "foundingLocation": "México"
+  }
+  </script>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#tecnologias">Tecnologías</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#videos">Videos</a></li>
-                    <li><a href="#formacion">Formación</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+  <!-- Skip link (accesibilidad + SEO UX) -->
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- =========================
+       Header / Nav
+       ========================= -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <!-- ====== CAMBIA EL LOGO AQUÍ ======
+             Reemplaza el archivo: assets/logo-iaeloko-studio.png
+        -->
+        <img class="brand__logo" src="assets/logo-iaeloko-studio.png" alt="Iaeloko Studio" width="44" height="44" loading="eager" />
+        <span class="brand__text">
+          <strong>Iaeloko</strong><span>Studio</span>
+        </span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="#proposito">Propósito</a>
+        <a href="#video">Video</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--primary" href="#marcas">Ver Marcas</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Main
+       ========================= -->
+  <main id="main">
+    <!-- =========================
+         Hero
+         ========================= -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="badge">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Página madre • Ecosistema de marcas digitales
+          </p>
+
+          <h1 id="heroTitle">
+            Tecnología, innovación y branding para construir marcas con propósito.
+          </h1>
+
+          <p class="hero__subtitle">
+            <strong>Iaeloko Studio</strong> centraliza y conecta proyectos de contenido, comercio y estilo de vida.
+            Una identidad sólida para escalar ideas en un ecosistema coherente.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#marcas">Explorar marcas</a>
+            <a class="btn btn--ghost" href="#contacto">Colaborar</a>
+          </div>
+
+          <ul class="hero__highlights" aria-label="Puntos clave">
+            <li>Diseño corporativo & digital</li>
+            <li>Contenido y producción</li>
+            <li>Comercio y comunidad</li>
+          </ul>
         </div>
-    </header>
 
-    <main>
-        <section id="inicio">
-            <div class="profile-container">
-                <div class="profile-image">
-                    <img src="./media/iaeloko.jpeg" alt="Yael Villarreal">
-                </div>
-                <div class="profile-info">
-                    <h1>Yael Villarreal</h1>
-                    <h2>Desarrollador Web Freelance</h2>
-                    <h3>Marketing | Diseño Gráfico | Ventas</h3>
-                    <div class="download-cv">
-                        <a href="./media/CV Yael Villarreal 2025.pdf" download class="download-button">
-                            <i style="color: aliceblue;" class="fas fa-download"></i> Descargar CV
-                        </a>
-                    </div>
-                </div>
+        <div class="hero__media" id="video">
+          <div class="video-card" aria-label="Video principal">
+            <div class="video-card__top">
+              <span class="video-card__label">Video destacado</span>
+              <button class="btn btn--small btn--ghost" id="copyVideoLink" type="button" aria-label="Copiar enlace del video">Copiar link</button>
             </div>
-           
-        </section>
 
-        <section id="servicios">
-            <h2>Mis Servicios</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>Diseño Web</h3>
-                    <img src="./media/sitio-web.png" alt="Web Logo" style="max-width: 150px; height: auto;">
-                    <p>Diseños atractivos y responsivos que capturan la esencia de tu marca.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Desarrollo Frontend</h3>
-                    <img src="./media/sensible.png" alt="Frontend Logo" style="max-width: 150px; height: auto;">
-                    <p>Código limpio y optimizado para una experiencia de usuario fluida.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>SEO</h3>
-                    <img src="./media/posicionamiento-en-buscadores.png" alt="Seo Logo" style="max-width: 150px; height: auto;">
-                    <p>Optimización para motores de búsqueda para aumentar tu visibilidad online.</p>
-                </div>
+            <!-- ====== CAMBIA EL VIDEO DE YOUTUBE AQUÍ ======
+                 Cambia el valor de data-video-id con el ID del video.
+                 Ejemplo: https://www.youtube.com/watch?v=XXXXXXXXXXX
+                 El ID es: XXXXXXXXXXX
+            -->
+            <div class="video" data-video-id="dQw4w9WgXcQ">
+              <iframe
+                title="Video principal de Iaeloko Studio"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
-        </section>
 
-        <section id="tecnologias">
-            <h2>Tecnologías</h2>
-            <div class="tech-container">
-                <div class="tech-item">
-                    <img src="./media/images.png" alt="WordPress Logo">
-                    <h3>WordPress</h3>
-                    <p>Experiencia en desarrollo de temas personalizados y plugins para WordPress.</p>
-                </div>
-                <div class="tech-item">
-                    <img src="./media/JavaScript-logo.png" alt="JavaScript Logo">
-                    <h3>JavaScript</h3>
-                    <p>Dominio de JavaScript moderno.</p>
-                </div>
-                <div class="tech-item">
-                    <img src="./media/python.svg" alt="Python Logo">
-                    <h3>Python</h3>
-                    <p>Habilidades en desarrollo con Python.</p>
-                </div>
+            <p class="video-card__hint">
+              Tip: cambia el video editando <code>data-video-id</code> en el HTML.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- =========================
+         Ecosistema / About
+         ========================= -->
+    <section class="section" id="ecosistema" aria-labelledby="ecosistemaTitle">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="ecosistemaTitle">Una marca madre para un ecosistema escalable</h2>
+          <p>
+            Iaeloko Studio funciona como el núcleo: define el estilo, la narrativa y la experiencia.
+            Cada marca vinculada hereda el mismo estándar visual para mantener coherencia y profesionalismo.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Identidad unificada</h3>
+            <p>Un sistema visual consistente que conecta marcas, canales y productos bajo una misma firma.</p>
+          </article>
+          <article class="card">
+            <h3>Innovación aplicada</h3>
+            <p>Diseño, tecnología y contenido que se sienten modernos, claros y confiables en cualquier plataforma.</p>
+          </article>
+          <article class="card">
+            <h3>Experiencia & comunidad</h3>
+            <p>Comunicación directa, estética premium y enfoque en valor real para la audiencia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         Marcas (logos clickeables)
+         ========================= -->
+    <section class="section section--alt" id="marcas" aria-labelledby="marcasTitle">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="marcasTitle">Marcas del ecosistema</h2>
+          <p>
+            Selecciona una marca para visitar su espacio. Los logotipos y enlaces son editables desde un solo lugar.
+          </p>
+        </div>
+
+        <div class="brand-grid" role="list">
+          <!-- =========================
+               Activo principal / Página madre
+               ========================= -->
+          <a class="brand-tile brand-tile--primary" role="listitem" href="#top" aria-label="Iaeloko Studio (Página madre)">
+            <!-- ====== CAMBIA LOGO + LINK AQUÍ ======
+                 Reemplaza el src por tu imagen.
+                 Cambia el href por la URL real.
+            -->
+            <img src="assets/logo-iaeloko-studio.png" alt="Iaeloko Studio" loading="lazy" />
+            <div class="brand-tile__meta">
+              <strong>Iaeloko Studio</strong>
+              <span>Activo principal • Página madre</span>
             </div>
-        </section>
+          </a>
 
-        <section id="portfolio" >
-            <h2>Portfolio</h2>
-            <div class="grid">
-           
+          <!-- =========================
+               Activos vinculados
+               ========================= -->
 
-            <a href="https://recetappworld.netlify.app">
-                <div class="grid-item">
-                    <img src="./media/Recet App.png" alt="Proyecto 2">
-                    <h3>Recet App</h3>
-                    <p>Node JS, API.</p>
-                </div>
-            </a>
-
-            <a href="https://www.github.com/iaeloko">
-                <div class="grid-item">
-                    <img src="./media/github.png" alt="Proyecto 3">
-                    <h3>GitHub</h3>
-                    <p>Repositorios en la Nube.</p>
-                </div>
-            </a>
+          <a class="brand-tile" role="listitem" href="https://example.com/coinxplores" target="_blank" rel="noopener noreferrer" aria-label="CoinXplores (abrir en nueva pestaña)">
+            <!-- Reemplaza el archivo: assets/logo-coinxplores.png -->
+            <img src="assets/logo-coinxplores.png" alt="CoinXplores" loading="lazy" />
+            <div class="brand-tile__meta">
+              <strong>CoinXplores</strong>
+              <span>Activos vinculados</span>
             </div>
-        </section>
+          </a>
 
-        <section id="videos" class="section">
-            <h2>Videos Destacados</h2>
-            <div class="video-container">
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QrSylL-CroQ?si=4cCznc_t268hnITA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h3> Desarrolo Web App</h3>
-
-                </div>
-
-
-
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WQiEm-U46Gg?si=iSWDg8FaWBbOguK6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h3>Marketing de Contenidos</h3>
-                </div>
+          <a class="brand-tile" role="listitem" href="https://example.com/nxu" target="_blank" rel="noopener noreferrer" aria-label="NXU Project (abrir en nueva pestaña)">
+            <!-- Reemplaza el archivo: assets/logo-nxu.png -->
+            <img src="assets/logo-nxu.png" alt="NXU Project" loading="lazy" />
+            <div class="brand-tile__meta">
+              <strong>NXU Project</strong>
+              <span>Activos vinculados</span>
             </div>
-        </section>
+          </a>
 
-        <section id="formacion">
-            <h2>Formación</h2>
-            <div class="grid">
-                
-                <div class="grid-item">
-                    <a href="./media/Copia de Captura de pantalla 2024-07-23 a la(s) 12.52.24 a.m..png">
-                    <img src="./media/Copia de Captura de pantalla 2024-07-23 a la(s) 12.52.24 a.m..png" alt="Proyecto 1">
-                    <h3>Diseño UI - UX</h3>
-                    <p>Certificado emitido por Google y Coursera</p>
-                </a>
-                </div>
-                <div class="grid-item">
-                    <a href="./media/Copia de Constancia_EDC_PYTHON.pdf">
-                    <img src="./media/Copia de Constancia_EDC_PYTHON.pdf" alt="Proyecto 2">
-                    <h3>Especialidad en Python</h3>
-                    <p>Certificado emitido por Pilares CDMX</p>
-                </a>
-                </div>
-                <div class="grid-item">
-                    <a href="./media/diploma-blockchain-criptomonedas.pdf">
-                    <img src="./media/diploma-blockchain-criptomonedas.pdf" alt="Proyecto 3">
-                    <h3>Blockchain</h3>
-                    <p>Certficado emitido por Platzi</p>
-                </a>
-                </div>
-               
+          <a class="brand-tile" role="listitem" href="https://example.com/iaeloko-riders" target="_blank" rel="noopener noreferrer" aria-label="Iaeloko Riders (abrir en nueva pestaña)">
+            <!-- Reemplaza el archivo: assets/logo-iaeloko-riders.png -->
+            <img src="assets/logo-iaeloko-riders.png" alt="Iaeloko Riders" loading="lazy" />
+            <div class="brand-tile__meta">
+              <strong>Iaeloko Riders</strong>
+              <span>Activos vinculados</span>
             </div>
-            
-        </section>
+          </a>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p class="contact-intro">¿Interesado en trabajar juntos o tienes alguna pregunta? No dudes en contactarme a través de cualquiera de estos medios:</p>
-            
-            <div class="contact-options">
-                <div class="email-container">
-                    <i class="fas fa-envelope"></i>
-                    <span id="email">iaeloko@gmail.com</span>
-                    <button id="copyEmail" class="copy-button">
-                        <i class="far fa-copy"></i>
-                    </button>
-                </div>
-                
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/yael-villarreal/" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/iaeloko" target="_blank" class="social-icon">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://wa.me/5580344559" target="_blank" class="social-icon">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                </div>
+          <a class="brand-tile" role="listitem" href="https://example.com/store" target="_blank" rel="noopener noreferrer" aria-label="SORE / Iaeloko Store (abrir en nueva pestaña)">
+            <!-- Reemplaza el archivo: assets/logo-store.png -->
+            <img src="assets/logo-store.png" alt="SORE / Iaeloko Store" loading="lazy" />
+            <div class="brand-tile__meta">
+              <strong>SORE</strong>
+              <span>Activos vinculados</span>
             </div>
-        </section>
-    </main>
+          </a>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Yael Villarreal - Desarrollador Web Freelance</p>
-    </footer>
+        <div class="note">
+          <p>
+            <strong>Tip:</strong> Para cambiar logotipos y links, solo reemplaza archivos en <code>/assets</code> y edita los <code>href</code> de cada tarjeta.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- =========================
+         Propósito / Value proposition
+         ========================= -->
+    <section class="section" id="proposito" aria-labelledby="propositoTitle">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2 id="propositoTitle">Propósito</h2>
+            <p>
+              Construir un ecosistema de marcas digitales con identidad corporativa, estética premium y enfoque en valor.
+              Desde contenido y comunidad hasta productos y servicios, todo conectado por una misma visión.
+            </p>
+
+            <ul class="checklist" aria-label="Enfoques">
+              <li>Branding y diseño de experiencias</li>
+              <li>Producción de contenido y storytelling</li>
+              <li>Optimización digital y crecimiento</li>
+              <li>Comercio: selección y recomendación de equipo</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>¿Qué construye Iaeloko Studio?</h3>
+            <p>
+              Un estándar visual + un sistema de marcas que te permite escalar sin perder coherencia.
+            </p>
+
+            <div class="panel__metrics" aria-label="Indicadores">
+              <div class="metric">
+                <span class="metric__num">4</span>
+                <span class="metric__label">Activos vinculados</span>
+              </div>
+              <div class="metric">
+                <span class="metric__num">1</span>
+                <span class="metric__label">Marca madre</span>
+              </div>
+              <div class="metric">
+                <span class="metric__num">∞</span>
+                <span class="metric__label">Escalabilidad</span>
+              </div>
+            </div>
+
+            <a class="btn btn--primary btn--full" href="#contacto">Trabajemos juntos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         Contacto
+         ========================= -->
+    <section class="section section--alt" id="contacto" aria-labelledby="contactoTitle">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="contactoTitle">Contacto</h2>
+          <p>
+            Para colaboraciones, branding, contenido o integraciones con el ecosistema.
+          </p>
+        </div>
+
+        <div class="contact">
+          <form class="form" id="contactForm" novalidate>
+            <div class="form__row">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required />
+            </div>
+
+            <div class="form__row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required />
+            </div>
+
+            <div class="form__row">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Enviar</button>
+
+            <p class="form__hint" id="formHint" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact__aside" aria-label="Datos directos">
+            <div class="contact-card">
+              <h3>Datos directos</h3>
+              <p>Responde rápido y deja una impresión corporativa.</p>
+
+              <ul class="contact-list">
+                <li>
+                  <span>Email</span>
+                  <a href="mailto:hola@iaelokostudio.com">hola@iaelokostudio.com</a>
+                </li>
+                <li>
+                  <span>WhatsApp</span>
+                  <a href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">+52 1 000 000 0000</a>
+                </li>
+                <li>
+                  <span>Ubicación</span>
+                  <span>México</span>
+                </li>
+              </ul>
+
+              <div class="social">
+                <a href="https://www.youtube.com/@tu-canal" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+                <a href="https://www.instagram.com/tu-cuenta" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://www.tiktok.com/@tu-cuenta" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       Footer
+       ========================= -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-iaeloko-studio.png" alt="Iaeloko Studio" width="40" height="40" loading="lazy" />
+        <div>
+          <strong>Iaeloko Studio</strong>
+          <p>Ecosistema de marcas digitales • Tecnología • Innovación • Profesionalismo</p>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <a href="#top">Inicio</a>
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="footer__legal">
+        <p>© <span id="year"></span> Iaeloko Studio. Todos los derechos reservados.</p>
+        <p><a href="#top">Volver arriba ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
