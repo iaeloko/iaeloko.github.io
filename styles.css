@@ -34,6 +34,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.logo__img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+
+
 body {
   font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
   background: radial-gradient(circle at 20% 10%, rgba(142, 75, 255, 0.12), transparent 55%),
