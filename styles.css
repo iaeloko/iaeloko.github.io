@@ -325,8 +325,8 @@ h3 {
 }
 
 .video__overlay img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 150%;
+  max-height: 150%;
   width: auto;
   height: auto;
   object-fit: contain;
