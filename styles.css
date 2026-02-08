@@ -442,6 +442,15 @@ h3 {
   font-size: 0.8rem;
 }
 
+.projects {
+  padding: 80px 0;
+}
+
+.projects__grid {
+  --gap: 20px;
+}
+
+
 .ecosystem {
   padding: 80px 0;
   background: var(--bg-soft);
